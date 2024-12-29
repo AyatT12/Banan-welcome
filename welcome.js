@@ -65,8 +65,8 @@ document.addEventListener("DOMContentLoaded", () => {
   QrImg.src = "QR.png";
 
   let texts = [
-    { content: "شركة كدي لتأجير السيارات", x: canvas_width - 1260, y: 1151, align: "right" },
-    { content: "Kadi Car Rental Company", x: canvas_width - 2145, y: 1557, align: "left" },
+    { content: "شركة كدي لتأجير السيارات", x: canvas_width - 1250, y: 1151, align: "right" },
+    { content: "Kadi Car Rental Company", x: canvas_width - 2140, y: 1557, align: "left" },
   ];
 
   let Images = [
