@@ -59,10 +59,10 @@ let loadImageOnCanvasAndThenWriteText = (canvas, imageUrl, texts, textStyleOptio
 document.addEventListener("DOMContentLoaded", () => {
   let theCanvas = document.getElementById("myCanvas");
 
-  let imageUrl = "Welcome Messege- Programmer Template-01.png";
+  let imageUrl = "Welcome Messege.png";
   var QrImg = new Image();
 
-  QrImg.src = "BananT.png";
+  QrImg.src = "QR.png";
 
   let texts = [
     { content: "شركة كدي لتأجير السيارات", x: canvas_width - 1260, y: 1151, align: "right" },
