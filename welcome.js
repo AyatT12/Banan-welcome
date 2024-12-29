@@ -59,27 +59,30 @@ let loadImageOnCanvasAndThenWriteText = (canvas, imageUrl, texts, textStyleOptio
 document.addEventListener("DOMContentLoaded", () => {
   let theCanvas = document.getElementById("myCanvas");
 
-  let imageUrl = "Welcome Messege - Template.png";
+  let imageUrl = "Welcome Messege- Programmer Template-01.png";
   var QrImg = new Image();
 
-  QrImg.src = "BananT.png"; 
+  QrImg.src = "BananT.png";
 
   let texts = [
-    { content: "شركة كدي لتأجير السيارات"  , x: canvas_width - 1260, y: 1151, align: "right" },
+    { content: "شركة كدي لتأجير السيارات", x: canvas_width - 1260, y: 1151, align: "right" },
     { content: "Kadi Car Rental Company", x: canvas_width - 2145, y: 1557, align: "left" },
   ];
-  
+
   let Images = [
     { content: QrImg, x: canvas_width - 1450, y: 635, width: 395, height: 400 },
   ];
 
   let textStyleOptions = {
     fontWeight: "bold",
-    fontSize:50 ,
+    fontSize: 50,
     fontFamily: "Sakkal Majalla Bold",
     textColor: "#4c3715",
-    textAlign: "right" 
+    textAlign: "right"
   };
 
-  loadImageOnCanvasAndThenWriteText(theCanvas, imageUrl, texts, textStyleOptions, Images);
+  // Ensure the font is loaded
+  document.fonts.load(`bold 50px "${textStyleOptions.fontFamily}"`).then(() => {
+    loadImageOnCanvasAndThenWriteText(theCanvas, imageUrl, texts, textStyleOptions, Images);
+  });
 });
